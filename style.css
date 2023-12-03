@@ -1,5 +1,10 @@
-*{
+* {
     border: border-box;
+
+}
+
+body {
+    padding: 10px;
 }
 
 header {
@@ -14,7 +19,6 @@ header {
     background-color: white;
     top: 0;
 }
-
 
 .navbar {
     display: flex;
@@ -76,6 +80,34 @@ header {
     display: block;
 }
 
+@media screen and (max-width:750px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navbar {
+
+        margin: auto 10px;
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+
+    header .logo a {
+        font-size: 20px;
+    }
+
+    header div {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+}
+
 main {
     height: fit-content;
     margin: 10px;
@@ -88,8 +120,7 @@ main {
     margin: 10px 60px 10px;
     width: 100%;
     height: 500px;
-    padding-top: 10px;
-    padding-bottom: 5px;
+    padding: 20px 0px;
 }
 
 .info {
@@ -145,6 +176,7 @@ a {
 .logo img {
     max-width: 70px;
     margin: 5px;
+
 }
 
 .empty-space {
@@ -183,6 +215,7 @@ footer {
 .social-media-links a {
     padding: 10px;
     margin: 10px;
+    /* border: 2px solid red; */
 }
 
 .social-media-links a :hover {
@@ -190,6 +223,33 @@ footer {
     transition-duration: 200ms;
 }
 
+@media screen and (max-width:550px) {
+    .social-media-links {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .social-media-links a {
+        width: 30px;
+        height: 30px;
+        background-size: cover;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-evenly;
+
+    }
+
+    footer .social-media-links,
+    .ownership,
+    .up {
+        margin: 15px;
+
+    }
+
+
+}
 
 .ownership {
     font-size: 0.9rem;
@@ -239,6 +299,38 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+
+@media screen and (max-width:1020px) {
+    .reachout {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .reachout #orders {
+        border: 2px solid black;
+        width: 300px;
+        height: 200px;
+        margin-left: auto;
+        margin-right: auto;
+
+
+
+    }
+
+    .reachout #contact .title {
+        margin-top: 25px;
+    }
+
+    .reachout .feedback {
+        border: 2px solid black;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 10px;
+        max-width: 250px;
+    }
+
 }
 
 .feedback {
@@ -331,14 +423,31 @@ table {
 .food section {
     border: 2px solid black;
     width: 350px;
+    max-width: 325px;
     margin: 10px auto 15px auto;
     border-radius: 8px;
-    border: 2px solid transparent;
-    box-shadow: 5px 5px 8px gray;
+    border: 2px solid black;
+    /* box-shadow: 5px 5px 8px gray; */
     max-height: 400px;
     overflow: scroll;
     overflow-x: hidden;
     font-family: 'ABeeZee', sans-serif;
+}
+
+@media screen and (max-width:1020px) {
+    .food .block {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        overflow: scroll;
+    }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .food h3 {
@@ -393,7 +502,7 @@ table {
 }
 
 
-.menu table td{
+.menu table td {
     font-size: 20px;
     font-weight: 500;
     text-align: center;
